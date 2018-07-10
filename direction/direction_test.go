@@ -1,8 +1,8 @@
 package direction
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestStringToDirection_Successful(t *testing.T) {
