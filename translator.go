@@ -2,10 +2,10 @@ package message
 
 import (
 	"errors"
-	"github.com/trasa/watchmud/direction"
-	"github.com/trasa/watchmud/slot"
 	"log"
 	"strings"
+	"github.com/trasa/watchmud-message/direction"
+	"github.com/trasa/watchmud-message/slot"
 )
 
 // Parse line into tokens
