@@ -7,6 +7,7 @@ import "reflect"
 var typeregistry = make(map[string]reflect.Type)
 
 func init() {
+	typeregistry["DeathNotification"] = reflect.TypeOf(GameMessage_DeathNotification{})
 	typeregistry["DropNotification"] = reflect.TypeOf(GameMessage_DropNotification{})
 	typeregistry["DropRequest"] = reflect.TypeOf(GameMessage_DropRequest{})
 	typeregistry["DropResponse"] = reflect.TypeOf(GameMessage_DropResponse{})
@@ -19,6 +20,7 @@ func init() {
 	typeregistry["ExitsRequest"] = reflect.TypeOf(GameMessage_ExitsRequest{})
 	typeregistry["ExitsResponse"] = reflect.TypeOf(GameMessage_ExitsResponse{})
 	typeregistry["GameMessage"] = reflect.TypeOf(GameMessage{})
+	typeregistry["GameMessage_DeathNotification"] = reflect.TypeOf(GameMessage_DeathNotification{})
 	typeregistry["GameMessage_DropNotification"] = reflect.TypeOf(GameMessage_DropNotification{})
 	typeregistry["GameMessage_DropRequest"] = reflect.TypeOf(GameMessage_DropRequest{})
 	typeregistry["GameMessage_DropResponse"] = reflect.TypeOf(GameMessage_DropResponse{})

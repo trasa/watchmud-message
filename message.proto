@@ -14,6 +14,8 @@ message GameMessage {
         Ping ping = 50;
         Pong pong = 51;
 
+        DeathNotification deathNotification = 90;
+
         DropRequest dropRequest = 100;
         DropResponse dropResponse = 101;
         DropNotification dropNotification = 102;
@@ -78,6 +80,11 @@ message GameMessage {
     }
 }
 
+
+message DeathNotification {
+    string target = 1;
+    bool isPlayer = 2;
+}
 
 message DropRequest {
     string target = 1;
