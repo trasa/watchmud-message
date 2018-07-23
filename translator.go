@@ -80,6 +80,9 @@ func TranslateLineToMessage(tokens []string) (msg *GameMessage, err error) {
 				}
 			}
 
+		case "roomstatus":
+			payload = RoomStatusRequest{}
+
 		case "'", "say":
 			if len(tokens) >= 2 {
 				payload = SayRequest{

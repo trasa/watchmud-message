@@ -55,6 +55,9 @@ message GameMessage {
         EnterRoomNotification enterRoomNotification = 182;
         LeaveRoomNotification leaveRoomNotification = 183;
 
+        RoomStatusRequest roomStatusRequest = 186;
+        RoomStatusResponse roomStatusResponse = 187;
+
         SayRequest sayRequest = 190;
         SayResponse sayResponse = 191;
         SayNotification sayNotification = 192;
@@ -260,6 +263,64 @@ message Pong {
     bool success = 1;
     string resultCode = 2;
     string target = 3;
+}
+
+message RoomStatusRequest {
+    string zoneId = 1;
+    string roomId = 2;
+}
+
+message RoomStatusResponse {
+    bool success = 1;
+    string resultCode = 2;
+    repeated PlayerInfo playerInfo = 3;
+    repeated InventoryInfo inventoryInfo = 4;
+    repeated MobInfo mobInfo = 5;
+    string id = 6;
+    string name = 7;
+    string description = 8;
+    string zoneName = 9;
+    string zoneId = 10;
+    repeated DirectionInfo directions = 11;
+    repeated string flags = 12;
+
+    message PlayerInfo {
+        string name = 1;
+        int64 currentHealth = 2;
+        int64 maxHealth = 3;
+    }
+
+    message InventoryInfo {
+        string id = 1;
+        string definitionId = 2;
+        repeated string aliases = 3;
+        repeated string categories = 4;
+        string name = 5;
+        string shortDescription = 6;
+        string descriptionOnGround = 7;
+        string zoneId = 8;
+        repeated string behaviors = 9;
+    }
+
+    message MobInfo {
+        string id = 1;
+        string definitionId = 2;
+        repeated string aliases = 3;
+        string name = 4;
+        string shortDescription = 5;
+        string descriptionInRoom = 6;
+        string zoneId = 7;
+        int64 currentHealth = 8;
+        int64 maxHealth = 9;
+        repeated string flags = 10;
+    }
+
+    message DirectionInfo {
+        string dir = 1;
+        string roomId = 2;
+        string zoneId = 3;
+        repeated string flags = 4;
+    }
 }
 
 message SayRequest {
