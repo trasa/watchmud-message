@@ -1,6 +1,37 @@
 # watchmud-message
 messages definition for watchmud project
 
+# Installing the gRPC toolchain
+
+### You need Go 1.6 or better
+
+    $ go version
+
+### Then install gRPC
+
+    $ go get -u google.golang.org/grpc
+
+### Install ProtoBuf 3
+
+#### Option 1: HomeBrew
+
+    brew install grpc
+
+#### Option 2: From zip file
+
+* https://github.com/google/protobuf/releases
+* Get correct binary (protoc-(version)-(platform).zip)
+* put this on your path
+ 
+### Install protoc plugin for Go
+
+    go get -u github.com/golang/protobuf/protoc-gen-go
+    
+### Verify your path
+
+Make sure that `$GOPATH/bin` is on your path.    
+
+
 # Adding New Messages to watchmud (and the client)
 
 Because I don't do this enough to recall which files to edit each 

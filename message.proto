@@ -14,6 +14,9 @@ message GameMessage {
         Ping ping = 50;
         Pong pong = 51;
 
+        CreatePlayerRequest createPlayerRequest = 60;
+        CreatePlayerResponse createPlayerResponse = 61;
+
         DeathNotification deathNotification = 90;
 
         DropRequest dropRequest = 100;
@@ -83,6 +86,19 @@ message GameMessage {
     }
 }
 
+message CreatePlayerRequest {
+    string playerName = 1;
+    string password = 2;
+    int32 race = 3; // TODO 0=human, 1=? ...
+    int32 class = 4; // TODO fighter, mage ...
+    // TODO gender, other fields...
+}
+
+message CreatePlayerResponse {
+    bool success = 1;
+    string resultCode = 2;
+    string playerName = 3;
+}
 
 message DeathNotification {
     string target = 1;
