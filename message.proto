@@ -290,7 +290,7 @@ message RecallRequest {
 message RecallResponse {
     bool success = 1;
     string resultCode = 2;
-    RoomStatusResponse roomStatusResponse = 3;
+    RoomDescription roomDescription = 3;
 }
 
 message RoomStatusRequest {
