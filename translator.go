@@ -80,6 +80,9 @@ func TranslateLineToMessage(tokens []string) (msg *GameMessage, err error) {
 				}
 			}
 
+		case "recall":
+			payload = RecallRequest{}
+
 		case "roomstatus":
 			payload = RoomStatusRequest{}
 
