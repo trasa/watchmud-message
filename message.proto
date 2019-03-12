@@ -17,6 +17,9 @@ message GameMessage {
         CreatePlayerRequest createPlayerRequest = 60;
         CreatePlayerResponse createPlayerResponse = 61;
 
+        DataRequest dataRequest = 74;
+        DataResponse dataResponse = 75;
+
         DeathNotification deathNotification = 90;
 
         DropRequest dropRequest = 100;
@@ -101,6 +104,16 @@ message CreatePlayerResponse {
     bool success = 1;
     string resultCode = 2;
     string playerName = 3;
+}
+
+message DataRequest {
+    string dataType = 1;
+}
+
+message DataResponse {
+    bool success = 1;
+    string resultCode = 2;
+    string data = 3;
 }
 
 message DeathNotification {
