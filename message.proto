@@ -113,7 +113,7 @@ message DataRequest {
 message DataResponse {
     bool success = 1;
     string resultCode = 2;
-    string data = 3;
+    bytes data = 3;
 }
 
 message DeathNotification {
