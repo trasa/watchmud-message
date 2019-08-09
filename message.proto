@@ -107,14 +107,13 @@ message CreatePlayerResponse {
 }
 
 message DataRequest {
-    string dataType = 1;
 }
 
 message DataResponse {
     bool success = 1;
     string resultCode = 2;
-    bytes data = 3;
-    string dataType = 4;
+    repeated bytes data = 3;
+    repeated string dataType = 4;
 }
 
 message DeathNotification {
