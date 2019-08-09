@@ -114,6 +114,7 @@ message DataResponse {
     bool success = 1;
     string resultCode = 2;
     bytes data = 3;
+    string dataType = 4;
 }
 
 message DeathNotification {
