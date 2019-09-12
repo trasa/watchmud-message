@@ -95,6 +95,9 @@ func TranslateLineToMessage(tokens []string) (msg *GameMessage, err error) {
 				err = errors.New("What do you want to say?")
 			}
 
+		case "stat", "stats":
+			payload = StatRequest{}
+
 		case "tell", "t":
 			if len(tokens) >= 3 {
 				payload = TellRequest{
