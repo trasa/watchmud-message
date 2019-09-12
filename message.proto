@@ -406,8 +406,8 @@ message StatResponse {
     bool success = 1;
     string resultCode = 2;
     string playerName = 3;
-    int32 currentHealth = 4;
-    int32 maxHealth = 5;
+    int64 currentHealth = 4;
+    int64 maxHealth = 5;
     string race = 6;
     string class = 7;
     string zoneId = 8;
