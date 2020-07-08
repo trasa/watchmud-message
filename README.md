@@ -3,7 +3,7 @@ messages definition for watchmud project
 
 # Installing the gRPC toolchain
 
-### You need Go 1.6 or better
+### You need Go 1.14 or better
 
     $ go version
 
@@ -26,6 +26,11 @@ messages definition for watchmud project
 ### Install protoc plugin for Go
 
     go get -u github.com/golang/protobuf/protoc-gen-go
+    
+### Install type-registry plugin for Go
+
+    go get -u github.com/trasa/type-registry
+    
     
 ### Verify your path
 

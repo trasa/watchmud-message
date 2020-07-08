@@ -125,6 +125,7 @@ func init() {
 	typeregistry["TellNotification"] = reflect.TypeOf(GameMessage_TellNotification{})
 	typeregistry["TellRequest"] = reflect.TypeOf(GameMessage_TellRequest{})
 	typeregistry["TellResponse"] = reflect.TypeOf(GameMessage_TellResponse{})
+	typeregistry["UnimplementedMudCommServer"] = reflect.TypeOf(UnimplementedMudCommServer{})
 	typeregistry["ViolenceNotification"] = reflect.TypeOf(GameMessage_ViolenceNotification{})
 	typeregistry["WearRequest"] = reflect.TypeOf(GameMessage_WearRequest{})
 	typeregistry["WearResponse"] = reflect.TypeOf(GameMessage_WearResponse{})
