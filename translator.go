@@ -60,7 +60,7 @@ func TranslateLineToMessage(tokens []string) (msg *GameMessage, err error) {
 		case "inv", "inventory":
 			payload = InventoryRequest{}
 
-		case "kill", "k", "attack":
+		case "kill", "attack":
 			if len(tokens) >= 2 {
 				payload = KillRequest{Target: tokens[1]}
 			} else {
