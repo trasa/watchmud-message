@@ -67,6 +67,22 @@ func TranslateLineToMessage(tokens []string) (msg *GameMessage, err error) {
 				err = errors.New("What do you want to attack?")
 			}
 
+		case "load": // load (mob|obj) [zone] id
+			if len(tokens) >= 4 {
+				payload = LoadRequest{
+					Type: tokens[1],
+					Zone: tokens[2],
+					Id:   tokens[3],
+				}
+			} else if len(tokens) == 3 {
+				payload = LoadRequest{
+					Type: tokens[1],
+					Id:   tokens[2],
+				}
+			} else {
+				err = errors.New("try: `load (mob|obj) [zone] id`")
+			}
+
 		case "look", "l":
 			payload = LookRequest{
 				ValueList: tokens[1:],

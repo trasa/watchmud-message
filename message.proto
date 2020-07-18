@@ -46,6 +46,9 @@ message GameMessage {
         KillRequest killRequest = 146;
         KillResponse killResponse = 147;
 
+        LoadRequest loadRequest = 148;
+        LoadResponse loadResponse = 149;
+
         LoginRequest loginRequest = 150;
         LoginResponse loginResponse = 151;
 
@@ -213,6 +216,17 @@ message KillRequest {
 }
 
 message KillResponse {
+    bool success = 1;
+    string resultCode = 2;
+}
+
+message LoadRequest {
+    string type = 1;
+    string zone = 2;
+    string id = 3;
+}
+
+message LoadResponse {
     bool success = 1;
     string resultCode = 2;
 }
