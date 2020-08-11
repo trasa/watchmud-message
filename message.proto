@@ -71,6 +71,9 @@ message GameMessage {
         RoomStatusRequest roomStatusRequest = 186;
         RoomStatusResponse roomStatusResponse = 187;
 
+        RestoreRequest restoreRequest = 188;
+        RestoreResponse restoreResponse = 189;
+
         SayRequest sayRequest = 190;
         SayResponse sayResponse = 191;
         SayNotification sayNotification = 192;
@@ -380,6 +383,15 @@ message RoomStatusResponse {
         string zoneId = 3;
         repeated string flags = 4;
     }
+}
+
+message RestoreRequest {
+    string target = 1;
+}
+
+message RestoreResponse {
+    bool success = 1;
+    string resultCode = 2;
 }
 
 message SayRequest {

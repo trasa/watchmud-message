@@ -99,6 +99,15 @@ func TranslateLineToMessage(tokens []string) (msg *GameMessage, err error) {
 		case "recall":
 			payload = RecallRequest{}
 
+		case "restore":
+			if len(tokens) >= 2 {
+				payload = RestoreRequest{
+					Target: tokens[1],
+				}
+			} else {
+				err = errors.New("Restore whom?")
+			}
+
 		case "roomstatus":
 			payload = RoomStatusRequest{}
 
