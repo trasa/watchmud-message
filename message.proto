@@ -78,6 +78,8 @@ message GameMessage {
         SayResponse sayResponse = 191;
         SayNotification sayNotification = 192;
 
+        RestoreNotification restoreNotification = 193;
+
         ShowEquipmentRequest showEquipmentRequest = 196;
         ShowEquipmentResponse showEquipmentResponse = 197;
 
@@ -394,6 +396,11 @@ message RestoreResponse {
     string resultCode = 2;
 }
 
+message RestoreNotification {
+    bool isPlayer = 1;
+    string target = 2;
+}
+
 message SayRequest {
     string value = 1;
 }
@@ -511,3 +518,4 @@ message WearResponse {
     bool success = 1;
     string resultCode = 2;
 }
+
